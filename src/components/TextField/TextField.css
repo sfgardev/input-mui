@@ -1,0 +1,32 @@
+.textField {
+  position: relative;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #000;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus-visible {
+  border-color: royalblue;
+}
+
+label {
+  position: absolute;
+  left: 2px;
+  color: slategrey;
+  transition: all 0.35s;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  translate: 0 -1.5rem;
+  font-size: 0.8rem;
+  color: darkgrey;
+}
+
+input::placeholder {
+  opacity: 0;
+}
